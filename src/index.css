@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom styles */
+
+html, body {
+  overflow-x: hidden;
+}
+body {
+  /* padding-top: 70px; */
+}
+.nav-link {
+  color: white !important;
+}
+
+.nav-link.active {
+  color: #f97316 !important;
+}
+
+.carousel-inner img{
+    height: 500px;
+    z-index: 10px;
+    object-fit: cover;
+    object-position: top;
+}
+.carousel-item {
+  position: relative;
+}
+.nav-link{
+    color: coral !important;
+    margin-right: 20px;
+    font-size: 18px !important;
+
+}
+.nav-link:hover{
+    color: #fff !important;
+}
+.active{
+    color: maroon !important;
+    background-color: wheat;
+}
+
+.btn-warning:hover{
+    background: transparent;
+}
+
+
+.colColor{
+    height: 20px;
+}
+
+.navbar-collapse{
+    flex-grow: 0;
+}
+
+/* .carousel-caption{
+    bottom: 40%;
+} */
+
+.overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.679);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
