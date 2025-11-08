@@ -1,14 +1,17 @@
 import React from "react";
-import Logo from "../assets/logod 2.png";
+import { Link, NavLink } from "react-router-dom";
+import Logo from "../assets/logod-2.png"; // ✅ your logo import
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg fixed-top bg-gray-800 shadow-md">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
       <div className="container">
-        <a className="navbar-brand" href="#">
-          <img src={Logo} width="150" alt="Logo" />
-        </a>
+        {/* Logo */}
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <img src={Logo} alt="Adeed House Logo" width="130" className="me-2" />
+        </Link>
 
+        {/* Toggle button for mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -21,37 +24,33 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* Navbar Links */}
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active text-orange-500 font-semibold hover:text-orange-700" href="#">
+              <NavLink to="/" className="nav-link" end>
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white hover:text-orange-400" href="#">
+              <NavLink to="/about" className="nav-link">
                 About
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white hover:text-orange-400" href="#">
+              <NavLink to="/menu" className="nav-link">
                 Menu
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white hover:text-orange-400" href="#">
-                Why Us
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-white hover:text-orange-400" href="#">
+              <NavLink to="/gallery" className="nav-link">
                 Gallery
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white hover:text-orange-400" href="#">
-                Testimonials
-              </a>
+              <NavLink to="/contact" className="nav-link">
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>

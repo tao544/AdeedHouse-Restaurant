@@ -8,6 +8,7 @@ import Feature from "../components/Feature";
 import Why from "../components/Why";
 import Gallery from "../components/Gallery";
 import Testimonials from "../components/Testimonials";
+import CallToAction from "../components/CallToAction";
 
 
 
@@ -53,12 +54,11 @@ const Home = () => {
                 Taste the best of African and Continental dishes — served fresh
                 daily!
               </p>
-              <button
-                type="button"
-                className="btn btn-outline-light text-warning"
-              >
-                View Menu
-              </button>
+              <div className="text-center mt-4 ">
+          <Link to="/menu" className="btn btn-outline-warning text-light px-4 py-2" >
+            See Full Menu
+          </Link>
+        </div>
             </div>
           </div>
           <div className="carousel-item">
@@ -128,6 +128,7 @@ const Home = () => {
             <Why />
             <Gallery />
             <Testimonials />
+            <CallToAction />
         </section>
   
 

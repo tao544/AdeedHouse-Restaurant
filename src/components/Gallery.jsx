@@ -5,6 +5,7 @@ import pics3 from '../assets/jollof-1.jpg'
 import pics4 from '../assets/truffle-spaq.jpg'
 import pics5 from '../assets/sourcurry.jpg'
 import pics6 from '../assets/drinks-1.jpg'
+import { Link } from "react-router-dom";
 
 const Gallery = () => {
   const images =[pics1, pics2, pics3, pics4, pics5, pics6];
@@ -23,9 +24,11 @@ const Gallery = () => {
         ))}
       </div>
       {/* button */}
-      <div className="mt-4">
-        <button className="btn btn-warning p-2 fw-semibold">View More Photos</button>
-      </div>
+        <div className="mt-4">
+<Link to="/gallery">
+  <button className="btn btn-warning p-2 fw-semibold">View More Photos</button>
+</Link>
+        </div>
 
     </div>
 

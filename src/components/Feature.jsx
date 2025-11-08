@@ -4,6 +4,7 @@ import menu2 from "../assets/iyan.jpg";
 import menu3 from "../assets/spaqbolo.jpg";
 import menu4 from "../assets/grilled-fish.jpg";
 import menu5 from "../assets/ofada-rice.jpg";
+import { Link } from "react-router-dom";
 
 const Feature = () => {
 return(
@@ -93,7 +94,9 @@ return(
           </div>
         </div>
         <div className="text-center mt-4 ">
-          <button className="btn btn-outline-warning">See Full Menu</button>
+          <Link to="/menu" className="btn btn-outline-warning text-dark px-4 py-2" >
+            See Full Menu
+          </Link>
         </div>
       </section>
 );
