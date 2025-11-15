@@ -12,21 +12,21 @@ const Gallery = () => {
   return (
    <section className='container-fluid py-5 bg-light'>
     <div className="text-center">
-      <h4 className='fw-bold text-warning mb-3'>A Glimpse of Our Flavors</h4>
-      <p className='text-muted mb-4'>Browse through some of our favorite dishes and happy dining moments</p>
+      <h4 className='fw-bold  text-slate-700! mb-3'>A Glimpse of Our Flavors</h4>
+      <p className='text-gray-900! mb-4'>Browse through some of our favorite dishes and happy dining moments</p>
       
       {/* gallery grid */}
       <div className="row">
         {images.map((img, index)=>(
           <div key={index} className='col-6 col-md-4'>
-            <img src={img} alt={`gallery ${index + 1}`} className='img-fluid rounded shadow-sm mt-4' />
+            <img src={img} alt={`gallery ${index + 1}`} className='img-fluid rounded shadow-sm mt-4 hover:scale-105 transition-transform duration-300' />
           </div>
         ))}
       </div>
       {/* button */}
         <div className="mt-4">
 <Link to="/gallery">
-  <button className="btn btn-warning p-2 fw-semibold">View More Photos</button>
+  <button className="btn btn-warning bg-amber-800! text-white p-2 fw-semibold hover:bg-transparent! hover:text-slate-800!">View More Photos</button>
 </Link>
         </div>
 

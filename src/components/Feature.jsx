@@ -10,7 +10,7 @@ const Feature = () => {
 return(
 <section className="container py-5">
         <div className="text-center mb-5">
-          <h4 className="fw-bold text-warning">Our Popular Dishes</h4>
+          <h4 className="fw-bold text-amber-950!">Our Popular Dishes</h4>
           <p className="text-muted">
             Explore some of our customer favorites prepared daily by our
             experienced chefs.

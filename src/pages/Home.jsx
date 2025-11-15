@@ -48,14 +48,14 @@ const Home = () => {
           <div className="carousel-item active">
             <img src={Slider1} className="d-block w-100" alt="..." />
             <div className="overlay"></div>
-            <div className="carousel-caption d-none  d-md-block items-center h-70 text-center justify-center">
+            <div className="carousel-caption   d-md-block items-center h-70 text-center justify-center">
               <h5 className="fs-1">Welcome to Adeed House Restaurant</h5>
               <p>
                 Taste the best of African and Continental dishes — served fresh
                 daily!
               </p>
               <div className="text-center mt-4 ">
-          <Link to="/menu" className="btn btn-outline-warning text-light px-4 py-2" >
+          <Link to="/menu" className="btn btn-outline-warning text-light px-4 py-2 " >
             See Full Menu
           </Link>
         </div>
@@ -64,7 +64,7 @@ const Home = () => {
           <div className="carousel-item">
             <img src={Slider2} className="d-block w-100" alt="..." />
             <div className="overlay"></div>
-            <div className="carousel-caption d-none d-md-block h-70">
+            <div className="carousel-caption  d-md-block h-70">
               <h5 className="fs-1">Delicious Meals, Warm Ambience</h5>
               <p>
                 Relax and enjoy your meal in our cozy and elegant dining space.
@@ -80,7 +80,7 @@ const Home = () => {
           <div className="carousel-item">
             <img src={Slider3} className="d-block w-100" alt="..." />
             <div className="overlay"></div>
-            <div className="carousel-caption d-none d-md-block h-70">
+            <div className="carousel-caption  d-md-block h-70">
               <h5 className="fs-1">We Bring African Taste to Life</h5>
               <p>
                 {" "}

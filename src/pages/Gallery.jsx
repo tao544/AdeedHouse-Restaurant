@@ -27,13 +27,13 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="bg-gray-100 text-center py-12">
+    <div className="bg-gray-100! text-center py-12">
       {/* Section 1 – Food Gallery */}
       <section className="max-w-7xl mx-auto px-4 mb-16">
-        <h2 className="text-amber-950! text-3xl font-bold mb-3">
+        <h2 className="text-white text-3xl font-bold mb-3 bg-slate-900 rounded ">
           Food Gallery
         </h2>
-        <p className="text-gray-700 mb-8">
+        <p className="text-gray-700! mb-8">
           A visual journey through our dishes — fresh ingredients, vibrant colors, and authentic taste.
         </p>
 
@@ -51,10 +51,10 @@ const Gallery = () => {
 
       {/* Section 2 – Restaurant & Events */}
       <section className="max-w-7xl mx-auto px-4">
-        <h2 className=" text-amber-950! text-3xl font-bold mb-3">
+        <h2 className=" text-white text-3xl font-bold mb-3 bg-slate-900 rounded">
           Restaurant & Events
         </h2>
-        <p className="text-gray-700 mb-8">
+        <p className="text-gray-700! mb-8">
           Our space is designed to make every meal special — whether it’s a family dinner, friends’ hangout, or romantic date night. 
           We also host small gatherings, birthdays, and private events.
         </p>

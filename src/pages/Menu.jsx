@@ -1,7 +1,6 @@
 import React from "react";
 import menuData from "../data/menuData";
-
-// Simple object to match category keys to display titles
+import menuBg from "../assets/menuBg.jpg";
 const categoryTitles = {
   localDishes: "Local Dishes",
   continentalDishes: "Continental Dishes",
@@ -10,13 +9,13 @@ const categoryTitles = {
 
 const Menu = () => {
   return (
-    <div className="container py-5">
+    <div className="container py-5 bg-blue-100">
       <h2 className="text-center mb-5 text-warning fw-semibold">Our Menu</h2>
 
-      {/* Looping through each category */}
+      {/* Looping */}
       {Object.entries(menuData).map(([category, items]) => (
         <div key={category} className="mb-5">
-          {/* Using the simple object to get the title */}
+          {/*  getting title */}
           <h3 className="text-danger mb-4 text-center">
             {categoryTitles[category]}
           </h3>

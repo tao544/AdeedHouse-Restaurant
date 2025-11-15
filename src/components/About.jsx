@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import aboutPic from "../assets/About-2.jpg";
 const About = () => {
   return (
-    <section id="about-us" className="container-fluid py-5 bg-light">
+    <section id="about-us" className="container-fluid py-5 bg-gray-300">
       <div className="row align-items-center">
-        {/* leftimage section */}
+       
 
         <div className="col-md-6 mb-4 mb-md-0">
           <img
@@ -15,7 +15,7 @@ const About = () => {
           />
         </div>
         <div className="col-md-6">
-          <h4 className="text-warning fw-bold mb-3 text-center">
+          <h4 className="text-amber-900! fw-bold mb-3 text-center">
             About Adeed House
           </h4>
           <p className="text-muted">
@@ -32,7 +32,7 @@ const About = () => {
           <div className="text-center mt-4 ">
              <Link
             to="/about"
-            className="btn btn-outline-warning text-dark px-4 py-2"
+            className="btn btn-outline-warning  text-dark px-4 py-2 hover:bg-amber-700! text-yellow-950!"
           >
             Learn More About Us
           </Link>

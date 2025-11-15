@@ -1,61 +1,84 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import Logo from "../assets/logod-2.png"; // ✅ your logo import
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../assets/logod-2.png";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  // Close mobile menu when resizing to large screens
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/menu", label: "Menu" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/contact", label: "Contact" },
+  ];
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
-      <div className="container">
-        {/* Logo */}
-        <Link className="navbar-brand d-flex align-items-center" to="/">
-          <img src={Logo} alt="Adeed House Logo" width="130" className="me-2" />
-        </Link>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/95! text-white backdrop-blur-sm shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 pb-2 pt-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <Link to="/" className="flex items-center pb-2 ">
+            <img src={Logo} alt="Adeed House Logo" className="w-32 sm:w-36" />
+          </Link>
+          {/* Desktop navigation (show from md and up) */}
+          <nav className="hidden md:flex md:items-center md:space-x-8">
+            {links.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="no-underline! text-yellow-600! hover:text-amber-700! px-3 py-2 rounded-md text-sm font-semibold! hover:scale-120 transition-transform duration-300"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
 
-        {/* Toggle button for mobile */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        {/* Navbar Links */}
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <NavLink to="/" className="nav-link" end>
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/about" className="nav-link">
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/menu" className="nav-link">
-                Menu
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/gallery" className="nav-link">
-                Gallery
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/contact" className="nav-link">
-                Contact
-              </NavLink>
-            </li>
-          </ul>
+          {/* Mobile toggle button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setOpen((s) => !s)}
+              aria-expanded={open}
+              aria-label="Toggle navigation"
+              className="p-2 rounded-md inline-flex items-center justify-center text-white hover:bg-gray-800/60!"
+            >
+              {open ? (
+                <i className="fa-solid fa-xmark fs-3"></i>
+              ) : (
+                <i className="fa-solid fa-bars fs-3"></i>
+              )}
+            </button>
+          </div>
         </div>
       </div>
-    </nav>
+      {/* Mobile menu  */}
+      <div
+        className={`${
+          open ? "block" : "hidden"
+        } md:hidden border-t border-gray-800! bg-gray-900!`}
+      >
+        <div className="px-4 pt-3 pb-4 space-y-1">
+          {links.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              onClick={() => setOpen(false)}
+              className="block no-underline! px-3 py-2 rounded-md text-yellow-600! hover:bg-gray-800!"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </header>
   );
 };
 

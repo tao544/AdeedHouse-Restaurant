@@ -14,7 +14,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thank you for contacting us! We’ll get back to you soon.");
-    // You can later replace this alert with real email sending logic (e.g., using EmailJS)
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -22,7 +21,7 @@ const Contact = () => {
     <section className="container py-5">
       {/* Section 1 – Contact Information */}
       <div className="text-center mb-5">
-        <h3 className="fw-bold text-warning mb-3">We’d Love to Hear From You!</h3>
+        <h3 className="fw-bold text-amber-950! mb-3">We’d Love to Hear From You!</h3>
         <p className="text-muted">
           Whether you’re placing an order, making a reservation, or giving feedback, we’re just a message away.
         </p>
@@ -30,7 +29,7 @@ const Contact = () => {
 
       <div className="row justify-content-center mb-5">
   <div className="col-md-10 col-lg-8">
-    <div className="bg-light p-4 rounded shadow-sm">
+    <div className="bg-gray-400 p-4 rounded shadow-sm">
       <h5 className="fw-semibold mb-3 text-dark">Contact Information</h5>
       <p className="mb-1"><i className="bi bi-geo-fill m-2 text-red-600"></i><strong>Address:</strong> 12, Obafemi Awolowo Way, Ikeja, Lagos, Nigeria</p>
       <p className="mb-1"><i className="bi bi-telephone-fill m-2 text-red-600"></i><strong>Phone:</strong> +234 816 234 7890</p>
@@ -43,8 +42,8 @@ const Contact = () => {
       {/* Section 2 – Contact Form */}
       <div className="row justify-content-center">
         <div className="col-md-10 col-lg-8">
-          <h4 className="fw-bold text-center text-warning mb-4">Send Us a Message</h4>
-          <form onSubmit={handleSubmit} className="bg-light p-4 rounded shadow-sm">
+          <h4 className="fw-bold text-center text-slate-700! mb-4">Send Us a Message</h4>
+          <form onSubmit={handleSubmit} className="bg-gray-100! p-4 rounded shadow-sm">
             <div className="mb-3">
               <label className="form-label fw-semibold">Name</label>
               <input
@@ -85,7 +84,7 @@ const Contact = () => {
             </div>
 
             <div className="text-center">
-              <button type="submit" className="btn btn-warning fw-semibold px-4">
+              <button type="submit" className="btn  bg-amber-700! text-white fw-semibold px-4  hover:bg-yellow-600! transition">
                 Submit
               </button>
             </div>

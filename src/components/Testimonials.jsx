@@ -23,7 +23,7 @@ useEffect(() => {
    setCurrent((prev) => (prev + 1) % testContent.length);
   }, 4000);
 
-  return () => clearInterval(interval); // cleanup on unmount
+  return () => clearInterval(interval);
 }, [testContent.length]);
 
 // const start = current * 2;
@@ -34,7 +34,7 @@ const visibleContent = [testContent[current]];
   return (
     <section className='container-fluid bg-dark py-5'>
       <div className="text-center text-white mb-5">
-        <h4 className='fw-bold text-warning'> What Our Customers Say </h4>
+        <h4 className='fw-bold text-amber-800!'> What Our Customers Say </h4>
       </div>
 
       <div className="row justify-content-center transition-all">
